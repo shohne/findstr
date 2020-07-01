@@ -44,7 +44,8 @@ int main(int argc, char **argv)
             FILE *fp = fopen(filename, "rb");
             size_t blocks_read = fread(content, info.st_size, 1, fp);
             fclose(fp);
-            std::string s(std::move(content));
+//            std::string s(std::move(content));
+            std::string s(content);
             free(content);
 
             int line = 1;
